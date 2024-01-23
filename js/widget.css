@@ -18,3 +18,14 @@
 .tlui-help-menu {
     display: none;
 }
+
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+  background: gray;
+}

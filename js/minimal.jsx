@@ -7,6 +7,9 @@ import "./widget.css";
 export const render = createRender(() => {
   const [width] = useModelState("width");
   const [height] = useModelState("height");
+
+  const [sections, setSections] = React.useState(5);
+
   return (
     <div
       style={{
@@ -15,7 +18,14 @@ export const render = createRender(() => {
         height: height,
       }}
     >
-      <Tldraw />
+      <div className="scroller">
+        {Array.from({ length: sections }).map((_, i) => (
+          <section key={i} style={{ height: height / 3 }}>
+            {/* <h2>Section {i}</h2> */}
+            <Tldraw />
+          </section>
+        ))}
+      </div>
     </div>
   );
 });
