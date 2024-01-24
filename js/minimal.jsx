@@ -20,7 +20,7 @@ export const render = createRender(() => {
     >
       <div className="scroller">
         {Array.from({ length: sections }).map((_, i) => (
-          <section key={i} style={{ height: height / 3 }}>
+          <section key={i} style={{ height: height / 2 }}>
             {/* <h2>Section {i}</h2> */}
             <Tldraw />
           </section>
